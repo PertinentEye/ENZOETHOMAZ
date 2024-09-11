@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Linguagem Ruby</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Ajustes de formatação no CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            background-image: url('https://www.ruby-lang.org/images/header-ruby.png'); /* Imagem de fundo */
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg'); /* Imagem de fundo para header e footer */
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        header img {
+            max-width: 150px;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        footer img {
+            max-width: 100px;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        h2, h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        section {
+            margin: 20px 0;
+        }
+
+        p, ul {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        .video-container {
+            margin-bottom: 20px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .video-template {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* NOVO: Centralizar o conteúdo */
+        .content-container {
+            max-width: 800px; /* Largura máxima do bloco central */
+            margin: 0 auto; /* Centraliza o bloco */
+            padding: 20px; /* Espaço interno para os lados */
+            background-color: #fff; /* Fundo branco para o conteúdo */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+        }
+
+        footer {
+            margin-top: 20px;
+        }
+
+        .ruby-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://www.ruby-lang.org/images/ruby-logo.png" alt="Logo Ruby">
+        <h1>Aprenda Ruby</h1>
+    </header>
+
+    <div class="content-container">
+        <section id="introducao-ruby">
+            <h2>Introdução à Linguagem Ruby</h2>
+            <p>A <strong>linguagem Ruby</strong> é uma linguagem de programação dinâmica, de código aberto, com foco em simplicidade e produtividade. Criada por <strong>Yukihiro "Matz" Matsumoto</strong> em 1995, Ruby combina uma sintaxe inspirada em linguagens como Perl, Smalltalk e Lisp, com a filosofia de tornar a programação divertida. Ruby é conhecida por seu código limpo e elegante, além de ser uma linguagem que foca na felicidade dos desenvolvedores.</p>
+
+            <img src="https://media.istockphoto.com/id/953381242/photo/ruby-programming-language-concept.jpg?s=612x612&w=0&k=20&c=K_wiWz4NqI_V-9r8XVvg57w4oxahszqVnnZteyu1XrU=" alt="Programação Ruby" class="ruby-image">
+
+            <h3>Principais Particularidades da Linguagem Ruby</h3>
+            <p>
+            <strong>1. Orientada a Objetos:</strong><br>
+            Tudo em Ruby é um objeto, incluindo números e tipos de dados básicos. Isso oferece uma abordagem consistente e flexível para escrever código, permitindo que desenvolvedores criem programas complexos de maneira organizada e reutilizável.
+            </p>
+            <p>
+            <strong>2. Flexibilidade e Expressividade:</strong><br>
+            Ruby permite que os desenvolvedores alterem e redefinam partes da linguagem conforme necessário. Sua sintaxe limpa e expressiva torna a leitura e escrita de código intuitiva.
+            </p>
+            <p>
+            <strong>3. Ruby on Rails:</strong><br>
+            O framework mais famoso da Ruby é o <strong>Ruby on Rails</strong> (ou apenas Rails), que é uma ferramenta poderosa para desenvolvimento rápido de aplicações web. Rails segue a filosofia de "convenção sobre configuração", permitindo que desenvolvedores construam aplicações rapidamente sem precisar de uma configuração complexa.
+            </p>
+            <p>
+            <strong>4. Comunidade Ativa:</strong><br>
+            Ruby tem uma comunidade vibrante, com muitos desenvolvedores contribuindo com bibliotecas e ferramentas. A linguagem conta com um vasto número de gems (bibliotecas reutilizáveis) para realizar praticamente qualquer tarefa.
+            </p>
+
+            <h3>Aplicações do Ruby no Mundo Real</h3>
+            <p>Ruby é amplamente utilizado em várias áreas, principalmente no desenvolvimento web e automação. Algumas das principais aplicações incluem:</p>
+            <ul>
+                <li><strong>Desenvolvimento Web</strong>: Ruby on Rails é uma das principais ferramentas usadas para criar sites e aplicativos web.</li>
+                <li><strong>Automação de Tarefas</strong>: Ruby é frequentemente usado para scripts e automação, especialmente no contexto de desenvolvimento e operações.</li>
+                <li><strong>Aplicativos Empresariais</strong>: Muitas startups e grandes empresas usam Ruby para construir seus sistemas internos devido à sua simplicidade e agilidade.</li>
+                <li><strong>Prototipagem Rápida</strong>: Ruby é ideal para criar protótipos rapidamente, permitindo testar ideias antes de desenvolver soluções mais complexas.</li>
+            </ul>
+
+            <h3>Por que Usar Ruby?</h3>
+            <p>
+            <strong>Produtividade:</strong> Ruby permite que os desenvolvedores façam mais com menos código.<br>
+            <strong>Comunidade e Ferramentas:</strong> A linguagem tem uma grande comunidade, e o repositório de gems (bibliotecas) facilita encontrar soluções para problemas comuns.<br>
+            <strong>Fácil de Aprender:</strong> A sintaxe de Ruby é simples e legível, o que torna a linguagem acessível a iniciantes.
+            </p>
+        </section>
+
+        <section id="pros-contras">
+            <h2>Prós e Contras</h2>
+            <h3>Prós:</h3>
+            <ul>
+                <li>Sintaxe simples e legível, o que facilita o aprendizado.</li>
+                <li>Grande comunidade e vasto repositório de gems.</li>
+                <li>Framework Ruby on Rails é amplamente usado e bem documentado.</li>
+                <li>Altamente produtivo para desenvolvimento rápido de aplicações.</li>
+            </ul>
+            <h3>Contras:</h3>
+            <ul>
+                <li>Desempenho pode ser inferior a outras linguagens mais rápidas, como C++ ou Java.</li>
+                <li>Não é ideal para aplicações que requerem alta performance.</li>
+                <li>Menor popularidade fora do desenvolvimento web em comparação com outras linguagens.</li>
+            </ul>
+        </section>
+
+        <section id="instalacao">
+            <h2>Instalação da IDE da Linguagem Ruby</h2>
+            <p>Para instalar Ruby no seu computador, acesse o site oficial da linguagem <a href="https://www.ruby-lang.org/pt/" target="_blank">aqui</a> e siga as instruções de instalação.</p>
+        </section>
+
+        <section id="exemplo">
+            <h2>Exemplo de um programa básico em Linguagem Ruby</h2>
+            <pre>
+# Definimos um array com alguns elementos iniciais
+# Um array em Ruby é uma coleção de objetos que podem ser de diferentes tipos.
+# No exemplo abaixo, o array inicial contém três números inteiros.
+vetor = [1, 2, 3]
+
+# Adicionamos um novo elemento ao final do array usando o método `push`
+# O método `push` adiciona o elemento especificado no final do array.
+vetor.push(4)
+
+# Outra maneira de adicionar um elemento ao final do array é usando o operador `<<`
+# O operador `<<` é um atalho para adicionar elementos no final do array.
+vetor << 5
+
+# Usamos um loop `each` para iterar sobre cada elemento do array
+# O método `each` passa cada elemento do array para o bloco de código fornecido.
+vetor.each do |elemento|
+  # Dentro do bloco, `elemento` representa o valor atual do item do array
+  # Aqui, estamos apenas imprimindo cada elemento na tela.
+  puts elemento
+end
+
+# Podemos também acessar elementos individuais do array pelo índice.
+# Índices em Ruby começam em 0, então o primeiro elemento está no índice 0.
+# Vamos acessar e imprimir o elemento no índice 0 e no índice 2.
+puts "Elemento no índice 0: #{vetor[0]}"
+puts "Elemento no índice 2: #{vetor[2]}"
+
+# O tamanho do array pode ser obtido usando o método `length` ou `size`
+# Aqui estamos imprimindo o número total de elementos no array.
+puts "Número total de elementos no vetor: #{vetor.length}"
+
+# Remover um elemento específico pode ser feito com o método `delete`
+# No exemplo abaixo, removemos o número 3 do array.
+vetor.delete(3)
+
+# Finalmente, imprimimos o array após a remoção para verificar o resultado.
+puts "Array após a remoção do elemento 3:"
+vetor.each do |elemento|
+  puts elemento
+end
+
+            </pre>
+        </section>
+
+        <section id="videos">
+            <h2>Vídeos Explicativos</h2>
+            <p>Aqui você poderá assistir a vídeos explicativos sobre Ruby.</p>
+            <div class="video-template">
+                <!-- Espaço para adicionar vídeos do YouTube -->
+                <div class="video-container">
+                    <iframe width="100%" height="315" src="https://youtu.be/cnkWUym_AAc?si=X3CB0B6Zs3LN_Rwj" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p>Vídeo 1</p>
+                </div>
+                <div class="video-container">
+                    <iframe width="100%" height="315" src="https://youtu.be/MP2ouYO1xHE?si=QOTMdwNO3Vck3rC-" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p>Vídeo 2</p>
+                </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <img src="https://www.ruby-lang.org/images/ruby-logo.png" alt="Logo Ruby">
+        <p>Enzo Miguel e Thomaz Ramalho - 3º ano C</p>
+    </footer>
+</body>
+</html>
