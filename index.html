@@ -216,6 +216,50 @@ puts "Array após a remoção do elemento 3:"
 vetor.each do |elemento|
   puts elemento
 end
+            </pre>
+        </section>
+
+        <section id="exemplo-avancado">
+            <h2>Exemplo Avançado: Criptografia em Ruby</h2>
+            <pre>
+# Exemplo de criptografia e descriptografia com Ruby usando a biblioteca OpenSSL
+
+require 'openssl'
+
+# Função para criptografar uma mensagem
+def encrypt_message(message, key, iv)
+  cipher = OpenSSL::Cipher::AES.new(256, :CBC)
+  cipher.encrypt
+  cipher.key = key
+  cipher.iv = iv
+  encrypted = cipher.update(message) + cipher.final
+  encrypted
+end
+
+# Função para descriptografar uma mensagem
+def decrypt_message(encrypted_message, key, iv)
+  cipher = OpenSSL::Cipher::AES.new(256, :CBC)
+  cipher.decrypt
+  cipher.key = key
+  cipher.iv = iv
+  decrypted = cipher.update(encrypted_message) + cipher.final
+  decrypted
+end
+
+# Gerar uma chave e um IV (Initialization Vector) aleatórios
+key = OpenSSL::Cipher::AES.new(256, :CBC).random_key
+iv = OpenSSL::Cipher::AES.new(256, :CBC).random_iv
+
+# Mensagem a ser criptografada
+message = "Esta é uma mensagem secreta."
+
+# Criptografar a mensagem
+encrypted_message = encrypt_message(message, key, iv)
+puts "Mensagem criptografada: #{encrypted_message.unpack1('H*')}"
+
+# Descriptografar a mensagem
+decrypted_message = decrypt_message(encrypted_message, key, iv)
+puts "Mensagem descriptografada: #{decrypted_message}"
 
             </pre>
         </section>
@@ -232,7 +276,6 @@ end
                 <div class="video-container">
                     <iframe width="100%" height="315" src="https://youtu.be/MP2ouYO1xHE?si=QOTMdwNO3Vck3rC-" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <p>Vídeo 2</p>
-                </div>
                 </div>
             </div>
         </section>
